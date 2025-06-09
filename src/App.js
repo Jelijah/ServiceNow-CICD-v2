@@ -104,6 +104,7 @@ class App {
      */
     async runTests() {
         try {
+            core.info('Running tests...');
             const inputs = this.getInputVariables();
             const url = this.buildRequestUrl(inputs);
             const response = await axios_1.default.post(url, {}, this.config);
@@ -150,7 +151,7 @@ class App {
      * @returns         void
      */
     async printStatus(result) {
-        core.info("Running....");
+        core.info(this.makeGreenString("Running...."));
         if (+result.status === App_types_1.ResponseStatus.Pending)
             core.info(result.status_label);
         if (+result.status === App_types_1.ResponseStatus.Running || +result.status === App_types_1.ResponseStatus.Successful)

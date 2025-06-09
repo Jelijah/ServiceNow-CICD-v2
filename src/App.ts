@@ -84,6 +84,7 @@ export default class App {
      */
     async runTests(): Promise<void | never> {
         try {
+            core.info('Running tests...')
             const inputs: RequestOptions = this.getInputVariables()
 
             const url: string = this.buildRequestUrl(inputs)
@@ -130,7 +131,7 @@ export default class App {
      * @returns         void
      */
     async printStatus(result: RequestResult): Promise<void> {
-        core.info("Running....")
+        core.info(this.makeGreenString("Running...."));
         if (+result.status === ResponseStatus.Pending) core.info(result.status_label)
 
         if (+result.status === ResponseStatus.Running || +result.status === ResponseStatus.Successful)
