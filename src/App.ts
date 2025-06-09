@@ -183,7 +183,7 @@ export default class App {
                     .join('\n'),
             )
         } else {
-            core.info(this.makeRedString(Errors.TESTS_FAILED))
+            core.info(this.makeRedString(Errors.TESTS_FAILED) + " " + result.status)
             throw new Error(Errors.TEST_SUITE_FAILED + " " + result.status)
         }
     }
