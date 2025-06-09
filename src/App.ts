@@ -14,7 +14,7 @@ import {
 } from './App.types'
 
 export default class App {
-    sleepTime = 3000
+    sleepTime = 10000
     user: User
     config: axiosConfig
     props: AppProps

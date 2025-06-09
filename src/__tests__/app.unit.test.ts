@@ -22,7 +22,7 @@ describe(`App lib`, () => {
         browserVersion: 'browserVersion',
         osName: 'osName',
         osVersion: 'osVersion',
-        run_in_cloud: "runInCloud"
+        runInCloud: "runInCloud"
     }
     let validInputs: RequestOptions = {}
 
