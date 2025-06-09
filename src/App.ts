@@ -184,7 +184,7 @@ export default class App {
             )
         } else {
             core.info(this.makeRedString(Errors.TESTS_FAILED))
-            throw new Error(Errors.TEST_SUITE_FAILED)
+            throw new Error(Errors.TEST_SUITE_FAILED + " " + result.status)
         }
     }
 
