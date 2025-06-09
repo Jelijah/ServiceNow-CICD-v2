@@ -13,3 +13,4 @@ npm-debug.log*
 
 # Optional eslint cache
 .eslintcache
+node_modules

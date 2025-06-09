@@ -10,7 +10,7 @@ import {
 } from '../App.types'
 
 const getFullUrl = (props: AppProps, inputs: any) =>
-    `https://${props.nowInstallInstance}.service-now.com/api/sn_cicd/testsuite/run?test_suite_sys_id=${inputs.test_suite_sys_id}&test_suite_name=${inputs.test_suite_name}&browser_name=${inputs.browser_name}&browser_version=${inputs.browser_version}&os_name=${inputs.os_name}&os_version=${inputs.os_version}`
+    `https://${props.nowInstallInstance}.service-now.com/api/sn_cicd/testsuite/run?test_suite_sys_id=${inputs.test_suite_sys_id}&test_suite_name=${inputs.test_suite_name}&browser_name=${inputs.browser_name}&browser_version=${inputs.browser_version}&os_name=${inputs.os_name}&os_version=${inputs.os_version}&run_in_cloud=${inputs.run_in_cloud}`
 
 describe(`App lib`, () => {
     let props: AppProps
@@ -22,6 +22,7 @@ describe(`App lib`, () => {
         browserVersion: 'browserVersion',
         osName: 'osName',
         osVersion: 'osVersion',
+        run_in_cloud: "run_in_cloud"
     }
     let validInputs: RequestOptions = {}
 
@@ -37,6 +38,7 @@ describe(`App lib`, () => {
             browser_version: inputs.browserVersion,
             os_name: inputs.osName,
             os_version: inputs.osVersion,
+            run_in_cloud: inputs.run_in_cloud
         }
 
         // Mock error/warning/info/debug
