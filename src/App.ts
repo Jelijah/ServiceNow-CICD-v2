@@ -130,6 +130,7 @@ export default class App {
      * @returns         void
      */
     async printStatus(result: RequestResult): Promise<void> {
+        core.info("Running....")
         if (+result.status === ResponseStatus.Pending) core.info(result.status_label)
 
         if (+result.status === ResponseStatus.Running || +result.status === ResponseStatus.Successful)

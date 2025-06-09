@@ -150,6 +150,7 @@ class App {
      * @returns         void
      */
     async printStatus(result) {
+        core.info("Running....");
         if (+result.status === App_types_1.ResponseStatus.Pending)
             core.info(result.status_label);
         if (+result.status === App_types_1.ResponseStatus.Running || +result.status === App_types_1.ResponseStatus.Successful)
