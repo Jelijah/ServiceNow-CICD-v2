@@ -84,7 +84,6 @@ export default class App {
      */
     async runTests(): Promise<void | never> {
         try {
-            core.info('Running tests...')
             const inputs: RequestOptions = this.getInputVariables()
 
             const url: string = this.buildRequestUrl(inputs)
@@ -131,7 +130,6 @@ export default class App {
      * @returns         void
      */
     async printStatus(result: RequestResult): Promise<void> {
-        core.info(this.makeGreenString("Running...."));
         if (+result.status === ResponseStatus.Pending) core.info(result.status_label)
 
         if (+result.status === ResponseStatus.Running || +result.status === ResponseStatus.Successful)
@@ -185,8 +183,8 @@ export default class App {
                     .join('\n'),
             )
         } else {
-            core.info(this.makeRedString(Errors.TESTS_FAILED) + " " + result.status)
-            throw new Error(Errors.TEST_SUITE_FAILED + " " + result.status)
+            core.info(this.makeRedString(Errors.TESTS_FAILED))
+            throw new Error(Errors.TEST_SUITE_FAILED)
         }
     }
 
