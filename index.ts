@@ -33,7 +33,7 @@ export const run = (): void => {
                 core.setFailed(error.message)
             })
         }
-    } catch (error) {
+    } catch (error: any) {
         core.setFailed(error.message)
     }
 }

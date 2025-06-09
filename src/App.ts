@@ -89,7 +89,7 @@ export default class App {
             const url: string = this.buildRequestUrl(inputs)
             const response: RequestResponse = await axios.post(url, {}, this.config)
             await this.printStatus(response.data.result)
-        } catch (error) {
+        } catch (error: any) {
             let message: string
             if (error.response && error.response.status) {
                 if (this.errCodeMessages[error.response.status]) {
