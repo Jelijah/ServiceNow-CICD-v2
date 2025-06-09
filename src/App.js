@@ -40,7 +40,7 @@ const core = __importStar(require("@actions/core"));
 const axios_1 = __importDefault(require("axios"));
 const App_types_1 = require("./App.types");
 class App {
-    sleepTime = 3000;
+    sleepTime = 10000;
     user;
     config;
     props;
@@ -196,8 +196,8 @@ class App {
                 .join('\n'));
         }
         else {
-            core.info(this.makeRedString(App_types_1.Errors.TESTS_FAILED));
-            throw new Error(App_types_1.Errors.TEST_SUITE_FAILED);
+            core.info(this.makeRedString(App_types_1.Errors.TESTS_FAILED) + " " + result.status);
+            throw new Error(App_types_1.Errors.TEST_SUITE_FAILED + " " + result.status);
         }
     }
     makeGreenString(message) {
