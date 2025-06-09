@@ -33,6 +33,7 @@ export interface RequestOptions {
     browser_version?: string | undefined;
     os_name?: string | undefined;
     os_version?: string | undefined;
+    run_in_cloud? : string | undefined;   
 }
 
 export interface RequestResponse {

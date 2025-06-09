@@ -208,6 +208,7 @@ export default class App {
         const os_version: string | undefined = core.getInput('osVersion')
         const test_suite_sys_id: string | undefined = core.getInput('testSuiteSysId')
         const test_suite_name: string | undefined = core.getInput('testSuiteName')
+        const run_in_cloud: string | undefined = core.getInput('cloudRunner')
 
         if (!test_suite_sys_id && !test_suite_name) throw new Error(Errors.SUITE_SYS_ID_OR_NAME)
 
@@ -218,6 +219,7 @@ export default class App {
             browser_version,
             os_name,
             os_version,
+            run_in_cloud
         }
 
         if (test_suite_sys_id && test_suite_name) {
