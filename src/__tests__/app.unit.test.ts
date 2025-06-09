@@ -22,7 +22,7 @@ describe(`App lib`, () => {
         browserVersion: 'browserVersion',
         osName: 'osName',
         osVersion: 'osVersion',
-        run_in_cloud: "run_in_cloud"
+        run_in_cloud: "runInCloud"
     }
     let validInputs: RequestOptions = {}
 
@@ -38,7 +38,7 @@ describe(`App lib`, () => {
             browser_version: inputs.browserVersion,
             os_name: inputs.osName,
             os_version: inputs.osVersion,
-            run_in_cloud: inputs.run_in_cloud
+            run_in_cloud: inputs.runInCloud
         }
 
         // Mock error/warning/info/debug

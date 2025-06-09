@@ -218,7 +218,7 @@ class App {
         const os_version = core.getInput('osVersion');
         const test_suite_sys_id = core.getInput('testSuiteSysId');
         const test_suite_name = core.getInput('testSuiteName');
-        const run_in_cloud = core.getInput('run_in_cloud');
+        const run_in_cloud = core.getInput('runInCloud');
         if (!test_suite_sys_id && !test_suite_name)
             throw new Error(App_types_1.Errors.SUITE_SYS_ID_OR_NAME);
         const options = {

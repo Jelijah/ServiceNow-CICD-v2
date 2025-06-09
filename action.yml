@@ -22,7 +22,7 @@ inputs:
   testSuiteName:
     description: "Required if testSuiteSysId is not specified"
     required: false
-  run_in_cloud: 
+  runInCloud: 
     description: "Set to true to run the test suite in the cloud. Default is false."
     required: false
 runs:
